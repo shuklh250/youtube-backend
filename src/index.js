@@ -7,7 +7,7 @@ dotenv.config({
     path: './env'
 })
 
-connectDB()
+connectDB(  )
 
 .then(()=>{
   aap.listen(process.env.PORT || 8000, () => {
