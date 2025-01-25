@@ -32,4 +32,4 @@ const uploadOnCloud = async (localfile) => {
 
 }
 
-export { uploadOnCloudinary }
+export {uploadOnCloudinary}
