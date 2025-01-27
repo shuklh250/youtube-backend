@@ -30,7 +30,7 @@ const userSchema = new Schema(
             index:true
 
          },
-         avtar:{
+         avatar:{
             type:String,
             required:true
          },

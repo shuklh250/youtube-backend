@@ -1,4 +1,6 @@
 import multer from "multer";
+import path from "path";
+
 
 const Storage = multer.diskStorage({
 
@@ -8,11 +10,15 @@ const Storage = multer.diskStorage({
         cb(null,"./public/temp")
     },
     filename: function(req,file,cb){
-        cb(null,file.originalname)
+        const fileExtension = path.extname(file.originalname);  // Get file extension
+        // console.log("fileExtension",fileExtension);
+        
+        const fileName = Date.now() + fileExtension; 
+        cb(null,fileName)
     }
 })
 
   export  const upload = multer ({
-     storage,
+     storage:Storage
       
     })
